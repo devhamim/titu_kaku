@@ -26,7 +26,7 @@
                     <div class="col-lg-5">
                         <div class="wptb-heading">
                             <div class="wptb-item--inner">
-                                <h6 class="wptb-item--subtitle"> <span>01 //</span> Contact Us</h6>
+                                <h6 class="wptb-item--subtitle"> Contact Us</h6>
                                 <h1 class="wptb-item--title"> Feel Free To Ask Us <span>Anything</span></h1>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                                     <div class="wptb-item--subtitle">
                                         SEND US EMAIL
                                     </div>
-                                    <h5 class="wptb-item--title"><a href="mailto:kimonophotography@email.com">kimonophotography@email.com</a></h5>
+                                    <h5 class="wptb-item--title"><a href="mailto:Hamim@email.com">Hamim@email.com</a></h5>
                                 </div>
                             </div>
                         </div>

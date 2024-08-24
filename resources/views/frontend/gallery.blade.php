@@ -19,8 +19,8 @@
             <div class="wptb-project--inner">
                 <div class="wptb-heading">
                     <div class="wptb-item--inner text-center">
-                        <h6 class="wptb-item--subtitle"><span>01//</span> Our Portfolio</h6>
-                        <h1 class="wptb-item--title"> Kimono captures <span>All of Your</span> <br>
+                        <h6 class="wptb-item--subtitle">Our Portfolio</h6>
+                        <h1 class="wptb-item--title"> Hamim captures <span>All of Your</span> <br>
                             beautiful memories</h1>
                     </div>
                 </div>

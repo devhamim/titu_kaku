@@ -127,7 +127,7 @@
 
         <h6>// Instagram</h6>
         <div class="insta-logo">
-            <i class="bi bi-instagram"></i> studio_kimono
+            <i class="bi bi-instagram"></i> studio_Hamim
         </div>
         <div class="wptb-instagram--gallery">
             <div class="wptb-item--inner d-flex align-items-center justify-content-center flex-wrap">

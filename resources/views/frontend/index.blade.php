@@ -17,7 +17,7 @@
                             </div>
                             <div class="wptb-heading">
                                 <div class="wptb-item--inner">
-                                    <h1 class="wptb-item--title">Arif Mahmud Jason</h1>
+                                    <h1 class="wptb-item--title">Hamim Jason</h1>
                                     <h6 class="wptb-item--subtitle">Branding</h6>
                                 </div>
                             </div>
@@ -196,7 +196,7 @@
                     <div class="wptb-heading">
                         <div class="wptb-item--inner">
                             <h1 class="wptb-item--title lg mb-5">20 Amazing <br> <span class="text-outline">Photographers</span></h1>
-                            <p class="wptb-item--description">The talent at Arif Mahmud runs wide range of services. Across many markets, geographies & typologies, our team members are some of the finest people of photographers in the industry wide and deep. From Across many markets, geographies & boundaries.</p>
+                            <p class="wptb-item--description">The talent at Hamim runs wide range of services. Across many markets, geographies & typologies, our team members are some of the finest people of photographers in the industry wide and deep. From Across many markets, geographies & boundaries.</p>
                             
                             <div class="wptb-agency-experience--item">
                                 <span>15+</span> Years Experience
@@ -274,7 +274,7 @@
                                             </div>
 
                                             <p class="wptb-item--description"> “I have an amazing photography session with team
-                                                Arif Mahmud photography agency, highly recommended.
+                                                Hamim photography agency, highly recommended.
                                                 They have amazing atmosphere in their studio. Iw’d
                                                 love to visit again”</p>
                                             <div class="wptb-item--meta">
@@ -312,7 +312,7 @@
                                             </div>
 
                                             <p class="wptb-item--description"> “I have an amazing photography session with team
-                                                Arif Mahmud photography agency, highly recommended.
+                                                Hamim photography agency, highly recommended.
                                                 They have amazing atmosphere in their studio. Iw’d
                                                 love to visit again”</p>
                                             <div class="wptb-item--meta">
@@ -350,7 +350,7 @@
                                             </div>
 
                                             <p class="wptb-item--description"> “I have an amazing photography session with team
-                                                Arif Mahmud photography agency, highly recommended.
+                                                Hamim photography agency, highly recommended.
                                                 They have amazing atmosphere in their studio. Iw’d
                                                 love to visit again”</p>
                                             <div class="wptb-item--meta">
@@ -384,7 +384,7 @@
         <div class="wptb-project--inner">
             <div class="wptb-heading">
                 <div class="wptb-item--inner text-center">
-                    <h6 class="wptb-item--subtitle"><span>01//</span> Photo Albums</h6>
+                    <h6 class="wptb-item--subtitle"> Photo Albums</h6>
                     <h1 class="wptb-item--title">Collection of photos <span>All of Our</span> <br> Best Works</h1>
                 </div>
             </div>
@@ -507,7 +507,7 @@
                 <div class="wptb-item--inner">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
-                            <h6 class="wptb-item--subtitle"><span>04 //</span> Latest News</h6>
+                            <h6 class="wptb-item--subtitle"> Latest News</h6>
                             <h1 class="wptb-item--title mb-0">Our Photography<br>
                                 <span>Related Blog</span></h1>
                         </div>

@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <!-- About Kimono -->
+    <!-- About Hamim -->
     <section class="wptb-about-one bg-image-2" style="background-image: url('{{ asset('frontend') }}/assets/img/more/texture.png');">
         <div class="container">
             <div class="wptb-image-single mr-bottom-90 wow fadeInUp">
@@ -38,8 +38,8 @@
 
                         <div class="col-md-6 ps-md-0 mt-5">
                             <div class="wptb-about--text">
-                                <p class="wptb-about--text-one mb-4">Kimono photography Agency runs wide and deep. Across many markets, geographies & typologies, our team members</p>
-                                <p>The talent at kimono runs wide range of services. Across many markets, geographies & typologies, our team members are some of the finest people of  photographers in the industry wide and deep. From Across many markets, geographies & boundaries. Hire Kimono in your event.</p>
+                                <p class="wptb-about--text-one mb-4">Hamim photography Agency runs wide and deep. Across many markets, geographies & typologies, our team members</p>
+                                <p>The talent at Hamim runs wide range of services. Across many markets, geographies & typologies, our team members are some of the finest people of  photographers in the industry wide and deep. From Across many markets, geographies & boundaries. Hire Hamim in your event.</p>
                             </div>
                         </div>
                     </div>
@@ -100,14 +100,14 @@
 
                     <div class="wptb-accordion wptb-accordion2 wow fadeInUp">
                         <div class="wptb--item active">
-                            <h6 class="wptb-item-title"><span>Kimono Missions</span> <i class="plus bi bi-plus"></i> <i class="minus bi bi-dash"></i></h6>
+                            <h6 class="wptb-item-title"><span>Hamim Missions</span> <i class="plus bi bi-plus"></i> <i class="minus bi bi-dash"></i></h6>
                             <div class="wptb-item--content">
                                 Our business consulting programs helps to break the performance of your business down into customers and product groups so you know exactly which customers or product groups are working.
                             </div>
                         </div>
 
                         <div class="wptb--item">
-                            <h6 class="wptb-item-title"><span>Kimono Photography Features</span> <i class="plus bi bi-plus"></i> <i class="minus bi bi-dash"></i></h6>
+                            <h6 class="wptb-item-title"><span>Hamim Photography Features</span> <i class="plus bi bi-plus"></i> <i class="minus bi bi-dash"></i></h6>
                             <div class="wptb-item--content">
                                 Our business consulting programs helps to break the performance of your business down into customers and product groups so you know exactly which customers or product groups are working.
                             </div>
@@ -145,7 +145,7 @@
             <div class="wptb-item--container">
                 <div class="wptb-item--inner">
                     <h4 class="wptb-item--text">
-                        <span class="wptb-text-backdrop">Kimono</span>
+                        <span class="wptb-text-backdrop">Hamim</span>
                         <span class="wptb-item-layer both-version position-relative">
                             <img src="{{ asset('frontend') }}/assets/img/more/star.png" alt="img">
                             <img src="{{ asset('frontend') }}/assets/img/more/star-dark.png" alt="img">
@@ -173,7 +173,7 @@
                         </span>
                     </h4>
                     <h4 class="wptb-item--text">
-                        <span class="wptb-text-backdrop">Kimono</span>
+                        <span class="wptb-text-backdrop">Hamim</span>
                         <span class="wptb-item-layer both-version position-relative">
                             <img src="{{ asset('frontend') }}/assets/img/more/star.png" alt="img">
                             <img src="{{ asset('frontend') }}/assets/img/more/star-dark.png" alt="img">
@@ -204,7 +204,7 @@
                         </span>
                     </h4>
                     <h4 class="wptb-item--text">
-                        <span class="wptb-text-backdrop">Kimono</span>
+                        <span class="wptb-text-backdrop">Hamim</span>
                         <span class="wptb-item-layer both-version position-relative">
                             <img src="{{ asset('frontend') }}/assets/img/more/star.png" alt="img">
                             <img src="{{ asset('frontend') }}/assets/img/more/star-dark.png" alt="img">
@@ -253,7 +253,7 @@
                 <div class="wptb-item--inner">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h6 class="wptb-item--subtitle"><span>01 //</span> Our Team</h6>
+                            <h6 class="wptb-item--subtitle"> Our Team</h6>
                             <h1 class="wptb-item--title mb-lg-0">Our Core Team of<br>
                                 <span>Photographers</span></h1>
                         </div>
@@ -286,7 +286,7 @@
                                 <div class="wptb-item--holder">
                                     <div class="wptb-item--meta">
                                         <h5 class="wptb-item--title">Maxim Alexhander</h5>
-                                        <p class="wptb-item--position">CEO, Kimono Agency</p>
+                                        <p class="wptb-item--position">CEO, Hamim Agency</p>
                                     </div>
                                     <div class="wptb-item--social">
                                         <a href="#">FB</a>
@@ -476,7 +476,7 @@
                                             </div>
 
                                             <p class="wptb-item--description"> “I have an amazing photography session with team
-                                                kimono photography agency, highly recommended.
+                                                Hamim photography agency, highly recommended.
                                                 They have amazing atmosphere in their studio. Iw’d
                                                 love to visit again”</p>
                                             <div class="wptb-item--meta">
@@ -514,7 +514,7 @@
                                             </div>
 
                                             <p class="wptb-item--description"> “I have an amazing photography session with team
-                                                kimono photography agency, highly recommended.
+                                                Hamim photography agency, highly recommended.
                                                 They have amazing atmosphere in their studio. Iw’d
                                                 love to visit again”</p>
                                             <div class="wptb-item--meta">
@@ -552,7 +552,7 @@
                                             </div>
 
                                             <p class="wptb-item--description"> “I have an amazing photography session with team
-                                                kimono photography agency, highly recommended.
+                                                Hamim photography agency, highly recommended.
                                                 They have amazing atmosphere in their studio. Iw’d
                                                 love to visit again”</p>
                                             <div class="wptb-item--meta">
@@ -588,7 +588,7 @@
                 <div class="wptb-item--inner">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h6 class="wptb-item--subtitle"><span>02 //</span> Our Awards</h6>
+                            <h6 class="wptb-item--subtitle">Our Awards</h6>
                             <h1 class="wptb-item--title mb-0">Our Photography<br>
                                 <span>Awards</span></h1>
                         </div>
