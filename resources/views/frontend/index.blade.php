@@ -172,6 +172,36 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="grid-item col-md-4"> 
+                            <div class="wptb-item--inner">
+                                <div class="wptb-item--image">
+                                    <img src="{{ asset('frontend') }}/assets/img/projects/4/7.jpg" alt="img">
+                                    <a class="wptb-item--link" href="project-details.html"><i class="bi bi-chevron-right"></i></a>
+                                </div>
+
+                                <div class="wptb-item--holder">
+                                    <div class="wptb-item--meta">
+                                        <h4><a href="project-details.html">Sunflower Boho girl</a></h4>
+                                        <p>By Jonathon Willson</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item col-md-4"> 
+                            <div class="wptb-item--inner">
+                                <div class="wptb-item--image">
+                                    <img src="{{ asset('frontend') }}/assets/img/projects/4/8.jpg" alt="img">
+                                    <a class="wptb-item--link" href="project-details.html"><i class="bi bi-chevron-right"></i></a>
+                                </div>
+
+                                <div class="wptb-item--holder">
+                                    <div class="wptb-item--meta">
+                                        <h4><a href="project-details.html">Sunflower Boho girl</a></h4>
+                                        <p>By Jonathon Willson</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
