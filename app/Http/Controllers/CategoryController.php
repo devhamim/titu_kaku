@@ -17,9 +17,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categorys = Category::all();
+        $gallerys = Category::all();
         return view('backend.category',[
-            'categorys'=>$categorys,
+            'gallerys'=>$gallerys,
         ]);
     }
 
@@ -52,10 +52,10 @@ class CategoryController extends Controller
         $category = Category::create($validatedData);
 
         if($category){
-            return back()->with('success', 'Category create successfully.');
+            return back()->with('success', 'Create successfully.');
         }
         else{
-            return back()->with('error', 'Failed to create Category.');
+            return back()->with('error', 'Failed to create.');
         }
     }
 
@@ -107,9 +107,9 @@ class CategoryController extends Controller
         $category->update($validatedData);
 
         if ($category) {
-            return back()->with('success', 'Category updated successfully.');
+            return back()->with('success', 'updated successfully.');
         } else {
-            return back()->with('error', 'Failed to update Category.');
+            return back()->with('error', 'Failed to update.');
         }
     }
 

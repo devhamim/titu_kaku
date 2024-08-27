@@ -8,9 +8,9 @@
                         <div class="footer-widget">
                             <div class="footer-nav">
                                 <ul>
-                                    <li class="menu-item"><a href="about.html">About Us</a></li>
-                                    <li class="menu-item"><a href="packages.html">Terms And Conditions</a></li>
-                                    <li class="menu-item"><a href="services-1.html">Privacy Policy</a></li>
+                                    <li class="menu-item"><a href="{{ route('about.us') }}">About Us</a></li>
+                                    <li class="menu-item"><a href="{{ route('terms.condition') }}">Terms And Conditions</a></li>
+                                    <li class="menu-item"><a href="{{ route('privacy.policy') }}">Privacy Policy</a></li>
 
                                 </ul>
                             </div>
@@ -21,11 +21,15 @@
                         <div class="footer-widget text-center">
                             <div class="logo mr-bottom-55">
                                 <a href="{{ url('/') }}" class="">
-                                    <img src="{{ asset('frontend/assets/img/logo.png') }}" alt="logo">
+                                    @if($setting->first()->white_logo != null)
+                                        <img width="30%" src="{{ asset('uploads/setting') }}/{{ $setting->first()->white_logo }}" alt="logo">
+                                    @else
+                                        <img width="30%" src="{{ asset('uploads/setting') }}/{{ $setting->first()->black_logo }}" alt="logo" >
+                                    @endif
                                 </a>
                             </div>
 
-                            <h6 class="widget-title">Sign up for all the latest <br> news and offers </h6>
+                            {{-- <h6 class="widget-title">Sign up for all the latest <br> news and offers </h6>
                             <form class="newsletter-form" method="post">
                                 <div class="form-group">
                                     <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
@@ -36,7 +40,12 @@
                                         <span class="text-second"><i class="bi bi-arrow-up-right"></i> <i class="bi bi-arrow-up-right"></i></span>
                                     </span>
                                 </button>
-                            </form>
+                            </form> --}}
+                            <div class="text-center">
+                                @if($setting->first()->about != null)
+                                    <p class="text-white">{{Str::limit( $setting->first()->about, 110, '...') }}</p>
+                                @endif
+                            </div>
                         </div>
                     </div>
 
@@ -61,14 +70,28 @@
         <div class="container">
             <div class="footer-bottom-inner">
                 <div class="copyright">
-                    <p><a href="https://themeforest.net/user/wpthemebooster">Hamim</a>, All Rights Reserved</p>
+                    @if($setting->first()->footer != null)
+                        <p><a href="{{ $setting->first()->footer }}">{{ $setting->first()->footer }}</a>, All Rights Reserved</p>
+                    @endif
                 </div>
                 <div class="social-box style-oval">
                     <ul>
-                        <li><a href="https://www.facebook.com/" class="bi bi-facebook"></a></li>
-                        <li><a href="https://www.instagram.com/" class="bi bi-instagram"></a></li>
-                        <li><a href="https://www.linkedin.com/" class="bi bi-linkedin"></a></li>
-                        <li><a href="https://www.behance.com/" class="bi bi-behance"></a></li>
+                        @if ($setting->first()->fb_link)
+                            <li><a href="{{ $setting->first()->fb_link }}" class="bi bi-facebook"></a></li>
+                        @endif
+                        @if ($setting->first()->youtube_link)
+                            <li><a href="{{ $setting->first()->youtube_link }}" class="bi bi-youtube"></a></li>
+                        @endif
+                        @if ($setting->first()->insta_link)
+                            <li><a href="{{ $setting->first()->insta_link }}" class="bi bi-instagram"></a></li>
+                        @endif
+                        @if ($setting->first()->linkind_link)
+                            <li><a href="{{ $setting->first()->linkind_link }}" class="bi bi-linkedin"></a></li>
+                        @endif
+                        @if ($setting->first()->tweeter_link)
+                            <li><a href="{{ $setting->first()->tweeter_link }}" class="bi bi-twitter"></a></li>
+                        @endif
+                        
                     </ul>
                 </div>
             </div>

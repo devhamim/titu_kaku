@@ -48,11 +48,6 @@
                             <span></span>
                         </div>
                     </div>
-
-                    <div class="header_search wptb-element">
-                        <a href="#" class="modal_search_icon" data-bs-toggle="modal" data-bs-target="#modalSearch"><i class="bi bi-search"></i></a>
-                    </div>
-
                     <button type="button" class="mr_menu_toggle wptb-element d-xl-none">
                         <i class="bi bi-list"></i>
                     </button>
@@ -76,7 +71,10 @@
         <div class="wptb-item--inner flex-start">
             <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
             <div class="wptb-item--holder">
-                <p class="wptb-item--description"><a href="mailto:kimocare@gmail.com">kimocare@gmail.com</a></p>
+                    @if($setting->first()->email != null)
+                        <p class="wptb-item--description"><a href="mailto:{{ $setting->first()->email }}">{{ $setting->first()->email }}</a></p>
+                    @endif
+                    
             </div>
         </div>
     </div>
@@ -85,7 +83,10 @@
         <div class="wptb-item--inner flex-start">
             <div class="wptb-item--icon"><i class="bi bi-geo-alt"></i></div>
             <div class="wptb-item--holder">
-                <p class="wptb-item--description"><a href="contact-1.html">28 Street, New York, USA</a></p>
+                @if($setting->first()->address != null)
+                    <p class="wptb-item--description"><a>{{ $setting->first()->address }}</a></p>
+                @endif
+                
             </div>
         </div>
     </div>
@@ -94,7 +95,9 @@
         <div class="wptb-item--inner flex-start">
             <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
             <div class="wptb-item--holder">
-                <p class="wptb-item--description"><a href="tel:+98765432122811">(+987) 654 321 228 11</a></p>
+                    @if($setting->first()->number_one != null)
+                        <p class="wptb-item--description"><a href="tel:{{ $setting->first()->number_one }}">{{ $setting->first()->number_one }}</a></p>
+                    @endif
             </div>
         </div>
     </div>
@@ -102,11 +105,21 @@
     <h6>Find Our Page</h6>
     <div class="social-box">
         <ul>
-            <li><a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a></li>
-            <li><a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a></li>
-            <li><a href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a></li>
-            <li><a href="https://www.behance.com/"><i class="bi bi-behance"></i></a></li>
-            <li><a href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a></li>
+            @if ($setting->first()->fb_link)
+                <li><a href="{{ $setting->first()->fb_link }}" class="bi bi-facebook"></a></li>
+            @endif
+            @if ($setting->first()->youtube_link)
+                <li><a href="{{ $setting->first()->youtube_link }}" class="bi bi-youtube"></a></li>
+            @endif
+            @if ($setting->first()->insta_link)
+                <li><a href="{{ $setting->first()->insta_link }}" class="bi bi-instagram"></a></li>
+            @endif
+            @if ($setting->first()->linkind_link)
+                <li><a href="{{ $setting->first()->linkind_link }}" class="bi bi-linkedin"></a></li>
+            @endif
+            @if ($setting->first()->tweeter_link)
+                <li><a href="{{ $setting->first()->tweeter_link }}" class="bi bi-twitter"></a></li>
+            @endif
         </ul>
     </div>
 </div>
@@ -115,66 +128,28 @@
     <button class="aside_close">Close <i class="bi bi-x-lg"></i></button>
 
     <div class="aside_logo logo">
-        <a href="{{ url('/')}}" class="light_logo">
-            <img src="{{ asset('frontend/assets/img/logo.png') }}" alt="logo">
-        </a>
-        <a href="{{ url('/')}}" class="dark_logo">
-            <img src="{{ asset('frontend/assets/img/logo.png') }}" alt="logo">
-        </a>
+        @if($setting->first()->white_logo != null)
+            <a href="{{ url('/')}}" class="light_logo">
+                <img src="{{ asset('uploads/setting') }}/{{ $setting->first()->white_logo }}" alt="logo">
+            </a>
+        @else
+            <a href="{{ url('/')}}" class="dark_logo">
+                <img src="{{ asset('uploads/setting') }}/{{ $setting->first()->black_logo }}" alt="logo">
+            </a>
+        @endif
     </div>
 
     <div class="aside_info_inner">
-
-        <h6>// Instagram</h6>
-        <div class="insta-logo">
-            <i class="bi bi-instagram"></i> studio_Hamim
-        </div>
-        <div class="wptb-instagram--gallery">
-            <div class="wptb-item--inner d-flex align-items-center justify-content-center flex-wrap">
-                <div class="wptb-item">
-                    <div class="wptb-item--image">
-                        <img src="{{ asset('frontend') }}/assets/img/instagram/6.jpg" alt="img">
-                    </div>
-                </div>
-
-                <div class="wptb-item">
-                    <div class="wptb-item--image">
-                        <img src="{{ asset('frontend') }}/assets/img/instagram/7.jpg" alt="img">
-                    </div>
-                </div>
-
-                <div class="wptb-item">
-                    <div class="wptb-item--image">
-                        <img src="{{ asset('frontend') }}/assets/img/instagram/8.jpg" alt="img">
-                    </div>
-                </div>
-
-                <div class="wptb-item">
-                    <div class="wptb-item--image">
-                        <img src="{{ asset('frontend') }}/assets/img/instagram/9.jpg" alt="img">
-                    </div>
-                </div>
-
-                <div class="wptb-item">
-                    <div class="wptb-item--image">
-                        <img src="{{ asset('frontend') }}/assets/img/instagram/10.jpg" alt="img">
-                    </div>
-                </div>
-                
-                <div class="wptb-item">
-                    <div class="wptb-item--image">
-                        <img src="{{ asset('frontend') }}/assets/img/instagram/11.jpg" alt="img">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
+        @if($setting->first()->name != null)
+            <h6>// {{ $setting->first()->name }}</h6>
+        @endif
         <div class="wptb-icon-box1 style2">
             <div class="wptb-item--inner flex-start">
                 <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
                 <div class="wptb-item--holder">
-                    <p class="wptb-item--description"><a href="mailto:kimocare@gmail.com">kimocare@gmail.com</a></p>
+                    @if($setting->first()->email != null)
+                        <p class="wptb-item--description"><a href="mailto:{{ $setting->first()->email }}">{{ $setting->first()->email }}</a></p>
+                    @endif
                 </div>
             </div>
         </div>
@@ -182,8 +157,10 @@
         <div class="wptb-icon-box1 style2">
             <div class="wptb-item--inner flex-start">
                 <div class="wptb-item--icon"><i class="bi bi-geo-alt"></i></div>
-                <div class="wptb-item--holder">
-                    <p class="wptb-item--description"><a href="contact-1.html">28 Street, New York, USA</a></p>
+                <div class="wptb-item--holder" style="text-align: left">
+                    @if($setting->first()->address != null)
+                        <p class="wptb-item--description"><a>{{ $setting->first()->address }}</a></p>
+                    @endif
                 </div>
             </div>
         </div>
@@ -192,7 +169,9 @@
             <div class="wptb-item--inner flex-start">
                 <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
                 <div class="wptb-item--holder">
-                    <p class="wptb-item--description"><a href="tel:+98765432122811">(+987) 654 321 228 11</a></p>
+                    @if($setting->first()->number_one != null)
+                        <p class="wptb-item--description"><a href="tel:{{ $setting->first()->number_one }}">{{ $setting->first()->number_one }}</a></p>
+                    @endif
                 </div>
             </div>
         </div>
@@ -200,32 +179,22 @@
         <h6>// Follow Us</h6>
         <div class="social-box style-square">
             <ul>
-                <li><a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a></li>
-                <li><a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a></li>
-                <li><a href="https://www.behance.com/"><i class="bi bi-behance"></i></a></li>
-                <li><a href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a></li>
+                @if ($setting->first()->fb_link)
+                    <li><a href="{{ $setting->first()->fb_link }}" class="bi bi-facebook"></a></li>
+                @endif
+                @if ($setting->first()->youtube_link)
+                    <li><a href="{{ $setting->first()->youtube_link }}" class="bi bi-youtube"></a></li>
+                @endif
+                @if ($setting->first()->insta_link)
+                    <li><a href="{{ $setting->first()->insta_link }}" class="bi bi-instagram"></a></li>
+                @endif
+                @if ($setting->first()->linkind_link)
+                    <li><a href="{{ $setting->first()->linkind_link }}" class="bi bi-linkedin"></a></li>
+                @endif
+                @if ($setting->first()->tweeter_link)
+                    <li><a href="{{ $setting->first()->tweeter_link }}" class="bi bi-twitter"></a></li>
+                @endif
             </ul>
-        </div>
-    </div>
-</div>
-
-<!-- Modal Search -->
-<div class="search-modal">
-    <div class="modal fade" id="modalSearch">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="search_overlay">
-                    <form class="credential-form" method="post">
-                        <div class="form-group">
-                            <input type="text" name="search" class="keyword form-control" placeholder="Search Here">
-                        </div>
-                        <button type="submit" class="btn-search">
-                            <span class="text-first"> <i class="bi bi-arrow-right"></i> </span>
-                        </button>
-                    </form>
-                </div>
-            </div>
         </div>
     </div>
 </div>

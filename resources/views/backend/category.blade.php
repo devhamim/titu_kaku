@@ -3,14 +3,14 @@
 <div class="content">
     <div class="breadcrumb-wrapper breadcrumb-contacts">
         <div>
-            <h1>Category List</h1>
+            <h1>Gallery List</h1>
             <p class="breadcrumbs"><span><a href="{{ route('dashboard') }}">Dashboard</a></span>
-                <span><i class="mdi mdi-chevron-right"></i></span>Category
+                <span><i class="mdi mdi-chevron-right"></i></span>Gallery
             </p>
         </div>
         <div>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#addCategory"> Add Category
+                data-bs-target="#addgallery"> Add Gallery
             </button>
         </div>
     </div>
@@ -32,28 +32,28 @@
                             </thead>
 
                             <tbody>
-                                @foreach ($categorys as $category)
+                                @foreach ($gallerys as $gallery)
                                     <tr>
                                         <td>
-                                            @if($category->image != null) 
-                                                <img width="100" src="{{ asset('uploads/category') }}/{{ $category->image }}" alt="Image" />
+                                            @if($gallery->image != null) 
+                                                <img width="100" src="{{ asset('uploads/category') }}/{{ $gallery->image }}" alt="Image" />
                                             @endif
                                         </td>
                                         <td>
-                                            @if ($category->name != null)
-                                                {{ $category->name }}
+                                            @if ($gallery->name != null)
+                                                {{ $gallery->name }}
                                             @else
                                                 N/A
                                             @endif
                                         </td>
                                         <td>
-                                            @if ($category->status == 1)
+                                            @if ($gallery->status == 1)
                                                 <div class="badge badge-success">Active</div>
                                             @else
                                                 <div class="badge badge-danger">Deactive</div>
                                             @endif
                                         </td>
-                                        <td>{{ $category->created_at->format('d-m-Y') }}</td>
+                                        <td>{{ $gallery->created_at->format('d-m-Y') }}</td>
                                         <td>
                                             <div class="btn-group mb-1">
                                                 <button type="button"
@@ -66,10 +66,10 @@
                                                 </button>
 
                                                 <div class="dropdown-menu">
-                                                    <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editCategory{{ $category->id }}">
+                                                    <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editgallery{{ $gallery->id }}">
                                                         Edit
                                                     </button>
-                                                    <form action="{{ route('categorys.destroy',  $category->id) }}" method="POST">
+                                                    <form action="{{ route('gallerys.destroy',  $gallery->id) }}" method="POST">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="dropdown-item" onclick="return confirm('Are you sure you want to delete this item?')">
@@ -83,14 +83,14 @@
 
                                         <!-- Edit User Modal  -->
 
-                                    <div class="modal fade modal-add-contact" id="editCategory{{ $category->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal fade modal-add-contact" id="editgallery{{ $gallery->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                             <div class="modal-content">
-                                                <form action="{{ route('categorys.update', $category->id) }}" method="POST" enctype="multipart/form-data">
+                                                <form action="{{ route('gallerys.update', $gallery->id) }}" method="POST" enctype="multipart/form-data">
                                                     @csrf
                                                     @method('PUT')
                                                     <div class="modal-header px-4">
-                                                        <h5 class="modal-title" id="exampleModalCenterTitle">Edit Category</h5>
+                                                        <h5 class="modal-title" id="exampleModalCenterTitle">Edit gallery</h5>
                                                     </div>
 
                                                     <div class="modal-body px-4">
@@ -110,14 +110,14 @@
                                                                 @enderror
                                                             </div>
                                                             <div class="col-sm-4 col-lg-4" style="height: 100px">
-                                                                <img width="100" id="blah" src="{{ asset('uploads/category') }}/{{ $category->image }}" alt="">
+                                                                <img width="100" id="blah" src="{{ asset('uploads/gallery') }}/{{ $gallery->image }}" alt="">
                                                             </div>
                                                         </div>
                                                         <div class="row mb-2">
                                                             <div class="col-lg-6">
                                                                 <div class="form-group mb-4">
                                                                     <label for="name">Name <span class="text-danger">*</span></label>
-                                                                    <input type="text" id="name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $category->name }}">
+                                                                    <input type="text" id="name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $gallery->name }}">
                                                                     @error('name')
                                                                         <span class="text-danger">{{$message}}</span>
                                                                     @enderror
@@ -127,8 +127,8 @@
                                                                 <div class="form-group mb-4">
                                                                     <label for="status">Status</label>
                                                                     <select name="status" id="status" class="form-control">
-                                                                        <option value="1"{{ $category->status == 1?'selected':'' }}>Active</option>
-                                                                        <option value="0"{{ $category->status == 0?'selected':'' }}>Deactive</option>
+                                                                        <option value="1"{{ $gallery->status == 1?'selected':'' }}>Active</option>
+                                                                        <option value="0"{{ $gallery->status == 0?'selected':'' }}>Deactive</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -153,14 +153,14 @@
         </div>
     </div>
 
-    <!-- Add Category Modal  -->
-    <div class="modal fade modal-add-contact" id="addCategory" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <!-- Add gallery Modal  -->
+    <div class="modal fade modal-add-contact" id="addgallery" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
-                <form action="{{ route('categorys.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('gallerys.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-header px-4">
-                        <h5 class="modal-title" id="exampleModalCenterTitle">Add New Category</h5>
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Add New gallery</h5>
                     </div>
 
                     <div class="modal-body px-4">
@@ -186,7 +186,7 @@
                         <div class="row mb-2">
                             <div class="col-lg-12">
                                 <div class="form-group mb-4">
-                                    <label for="name">Category <span class="text-danger">*</span></label>
+                                    <label for="name">gallery <span class="text-danger">*</span></label>
                                     <input type="text" id="name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}">
                                     @error('name')
                                         <span class="text-danger">{{$message}}</span>

@@ -23,9 +23,9 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        $reviews = Review::all();
+        $collections = Review::all();
         return view('backend.review',[
-            'reviews'=>$reviews,
+            'collections'=>$collections,
         ]);
     }
 
@@ -60,10 +60,10 @@ class ReviewController extends Controller
         $review = Review::create($validatedData);
 
         if($review){
-            return back()->with('success', 'Review create successfully.');
+            return back()->with('success', 'Create successfully.');
         }
         else{
-            return back()->with('error', 'Failed to create Review.');
+            return back()->with('error', 'Failed to create.');
         }
     }
 
@@ -115,9 +115,9 @@ class ReviewController extends Controller
         $reviews->update($validatedData);
 
         if ($reviews) {
-            return back()->with('success', 'Review updated successfully.');
+            return back()->with('success', 'Updated successfully.');
         } else {
-            return back()->with('error', 'Failed to update Review.');
+            return back()->with('error', 'Failed to update.');
         }
     }
 

@@ -19135,7 +19135,6 @@ code {
 .form-group .form-control, .input-group .form-control {
   font-size: 15px;
   padding: 0.5rem 1.06rem;
-  border-color: #f3f3f3;
 }
 .form-group .form-control.input-lg, .input-group .form-control.input-lg {
   font-size: 1.06rem;

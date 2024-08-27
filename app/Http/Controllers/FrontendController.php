@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
-use App\Models\Attribute;
 use App\Models\Banner;
 use App\Models\Category;
-use App\Models\Inventory;
-use App\Models\OrderProduct;
+use App\Models\Client;
+use App\Models\Experience;
 use App\Models\PrivacyPolicy;
-use App\Models\Product;
 use App\Models\Review;
+use App\Models\Stores;
 use App\Models\TermAndCondition;
+use App\Models\Video;
 use Illuminate\Http\Request;
 use DB;
 
@@ -21,18 +21,21 @@ class FrontendController extends Controller
     function home(){
         $banners = Banner::where('status', 1)->get();
         $categorys = Category::where('status', 1)->get();
-        $products = Product::where('status', 1)->get();
         $reviews = Review::where('status', 1)->get();
-
-        $topSellingProducts = Product::join('order_products', 'products.id', '=', 'order_products.product_id')
-    ->take(20)
-    ->get();
+        $experience = Experience::first();
+        $clients = Client::where('status', 1)->get();
+        $stores = Stores::where('status', 1)->get();
+        $videos = Video::where('status', 1)->first();
+        $footer_image = Review::where('status', 1)->orderBy('id', 'DESC')->paginate(5);
         return view('frontend.index',[
             'banners'=>$banners,
             'categorys'=>$categorys,
-            'products'=>$products,
             'reviews'=>$reviews,
-            'topSellingProducts'=>$topSellingProducts,
+            'experience'=>$experience,
+            'clients'=>$clients,
+            'stores'=>$stores,
+            'videos'=>$videos,
+            'footer_image'=>$footer_image,
         ]);
     }
 

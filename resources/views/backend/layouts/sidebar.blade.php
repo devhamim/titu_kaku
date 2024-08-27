@@ -24,12 +24,6 @@
                     </a>
                     <hr>
                 </li>
-                <li>
-                    <a class="sidenav-item-link" href="{{ route('orders.index') }}">
-                        <i class="mdi mdi-cart"></i>
-                        <span class="nav-text">Order</span>
-                    </a>
-                </li>
             @else
                 <li class="active">
                     <a class="sidenav-item-link" href="{{ route('dashboard') }}">
@@ -37,12 +31,6 @@
                         <span class="nav-text">Dashboard</span>
                     </a>
                     <hr>
-                </li>
-                <li>
-                    <a class="sidenav-item-link" href="{{ route('orders.index') }}">
-                        <i class="mdi mdi-cart"></i>
-                        <span class="nav-text">Order</span>
-                    </a>
                 </li>
                 <!-- user list -->
                 <li>
@@ -59,82 +47,48 @@
                     </a>
                 </li>
                 <!-- category list -->
-                <li class="has-sub">
-                    <a class="sidenav-item-link" href="javascript:void(0)">
-                        <i class="mdi mdi-dns-outline"></i>
-                        <span class="nav-text">Category</span> <b class="caret"></b>
-                    </a>
-                    <div class="collapse">
-                        <ul class="sub-menu" id="vendors" data-parent="#sidebar-menu">
-                            <li class="">
-                                <a class="sidenav-item-link" href="{{ route('categorys.index') }}">
-                                    <span class="nav-text">Category List</span>
-                                </a>
-                            </li>
-
-                            <li class="">
-                                <a class="sidenav-item-link" href="{{ route('subcategorys.index') }}">
-                                    <span class="nav-text">Subcategory List</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <!-- Order list -->
-                {{-- <li>
-                    <a class="sidenav-item-link" href="{{ route('review.index') }}">
-                        <i class="mdi mdi-cart"></i>
-                        <span class="nav-text">Review</span>
-                    </a>
-                </li> --}}
-                <!-- Order list -->
-                
-                <!-- product list -->
-                <li class="has-sub">
-                    <a class="sidenav-item-link" href="javascript:void(0)">
-                        <i class="mdi mdi-palette-advanced"></i>
-                        <span class="nav-text">Product</span> <b class="caret"></b>
-                    </a>
-                    <div class="collapse">
-                        <ul class="sub-menu" id="vendors" data-parent="#sidebar-menu">
-                            <li class="">
-                                <a class="sidenav-item-link" href="{{ route('product.index') }}">
-                                    <span class="nav-text">Product List</span>
-                                </a>
-                            </li>
-
-                            <li class="">
-                                <a class="sidenav-item-link" href="{{ route('inventory.index') }}">
-                                    <span class="nav-text">Attribute</span>
-                                </a>
-                            </li>
-                            <li class="">
-                                <a class="sidenav-item-link" href="{{ route('attribute.index') }}">
-                                    <span class="nav-text">Color</span>
-                                </a>
-                            </li>
-                            <li class="">
-                                <a class="sidenav-item-link" href="{{ route('size.list') }}">
-                                    <span class="nav-text">Size</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <!-- delevary charge list -->
                 <li>
-                    <a class="sidenav-item-link" href="{{ route('delevarycharge.index') }}">
-                        <i class="mdi mdi-account-group"></i>
-                        <span class="nav-text">Delevary Charge</span>
+                    <a class="sidenav-item-link" href="{{ route('gallerys.index') }}">
+                        <i class="mdi mdi-dns-outline"></i>
+                        <span class="nav-text">Gallery List</span>
                     </a>
                 </li>
-                <!-- sms list -->
-                {{-- <li>
-                    <a class="sidenav-item-link" href="{{ route('sms.index') }}">
-                        <i class="mdi mdi-account-group"></i>
-                        <span class="nav-text">SMS</span>
+                <!-- category list -->
+                <li>
+                    <a class="sidenav-item-link" href="{{ route('experience.index') }}">
+                        <i class="mdi mdi-dns-outline"></i>
+                        <span class="nav-text">Experience</span>
                     </a>
-                </li> --}}
+                </li>
+                <!-- clients list -->
+                <li>
+                    <a class="sidenav-item-link" href="{{ route('clients.index') }}">
+                        <i class="mdi mdi-cart"></i>
+                        <span class="nav-text">Clients</span>
+                    </a>
+                </li>
+                <!-- stories list -->
+                <li>
+                    <a class="sidenav-item-link" href="{{ route('stories.index') }}">
+                        <i class="mdi mdi-cart"></i>
+                        <span class="nav-text">Stories</span>
+                    </a>
+                </li>
+                <!-- videos list -->
+                <li>
+                    <a class="sidenav-item-link" href="{{ route('videos.index') }}">
+                        <i class="mdi mdi-cart"></i>
+                        <span class="nav-text">Videos</span>
+                    </a>
+                </li>
+                <!-- review list -->
+                <li>
+                    <a class="sidenav-item-link" href="{{ route('collection.index') }}">
+                        <i class="mdi mdi-cart"></i>
+                        <span class="nav-text">Photos Collection</span>
+                    </a>
+                </li>
+
                 <!-- Addtional Page list -->
                 <li class="has-sub">
                     <a class="sidenav-item-link" href="javascript:void(0)">
