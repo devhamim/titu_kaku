@@ -95,7 +95,7 @@
 
                                                     <div class="modal-body px-4">
                                                         <div class="form-group row mb-6">
-                                                            <label for="coverImage" class="col-sm-4 col-lg-2 col-form-label">Review <span class="text-secondary">(Optional)</span></label>
+                                                            <label for="coverImage" class="col-sm-4 col-lg-2 col-form-label">Review <span class="text-danger">*</span> </label>
 
                                                             <div class="col-sm-4 col-lg-6">
                                                                 <div class="custom-file mb-1">
@@ -116,7 +116,7 @@
                                                         <div class="row mb-2">
                                                             <div class="col-lg-6">
                                                                 <div class="form-group mb-4">
-                                                                    <label for="name">Name <span class="text-danger">*</span></label>
+                                                                    <label for="name">Name <span class="text-secondary">(Optional)</span></label>
                                                                     <input type="text" id="name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $gallery->name }}">
                                                                     @error('name')
                                                                         <span class="text-danger">{{$message}}</span>
@@ -186,7 +186,7 @@
                         <div class="row mb-2">
                             <div class="col-lg-12">
                                 <div class="form-group mb-4">
-                                    <label for="name">gallery <span class="text-danger">*</span></label>
+                                    <label for="name">Name <span class="text-secondary">(Optional)</span></label>
                                     <input type="text" id="name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}">
                                     @error('name')
                                         <span class="text-danger">{{$message}}</span>

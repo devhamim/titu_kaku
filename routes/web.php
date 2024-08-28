@@ -32,16 +32,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [FrontendController::class, 'home'])->name('home');
 Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 Route::get('/contect', [FrontendController::class, 'contect'])->name('contect');
-Route::get('/blogs', [FrontendController::class, 'blogs'])->name('blogs');
-Route::get('/stories.details/{slug}', [FrontendController::class, 'stories.details'])->name('stories.details');
+Route::get('/our/stories', [FrontendController::class, 'blogs'])->name('our.stories');
+Route::get('/our/videos', [FrontendController::class, 'our_videos'])->name('our.videos');
+Route::get('/stories/details/{slug}', [FrontendController::class, 'stories_details'])->name('stories.details');
+Route::post('/message/store', [FrontendController::class, 'message_store'])->name('message.store');
 
-
-Route::get('/category/{category}', [FrontendController::class, 'category_show'])->name('category.show');
-Route::get('/subcategory/{subcategory}', [FrontendController::class, 'subcategory_show'])->name('subcategory.show');
-Route::get('/shop', [FrontendController::class, 'shop'])->name('shop');
-
-
-Route::get('/getProductSizes', [FrontendController::class, 'getProductSizes'] )->name('getProductSizes');
 
 // addtional page
 Route::get('/aboutus', [FrontendController::class, 'about_us'])->name('about.us');

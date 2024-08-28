@@ -9,13 +9,15 @@
             <div class="wptb-item-layer wptb-item-layer-one">
                 <img src="{{ asset('frontend') }}/assets/img/more/circle.png" alt="img">
             </div>
-            <h2 class="wptb-item--title ">Our Projects</h2>
+            <h2 class="wptb-item--title ">Contact Us</h2>
         </div>
     </div>
 
     <!-- Google Map -->
     <div class="gmapbox wow fadeInUp">
-        <div id="googleMap" class="map"></div>
+        @if($setting->first()->google_map != null)
+            {!! $setting->first()->google_map !!}
+        @endif
     </div>
 
     <!-- Contact -->
@@ -36,7 +38,11 @@
                                     <div class="wptb-item--subtitle">
                                         Call Us For Query
                                     </div>
-                                    <h5 class="wptb-item--title"><a href="tel:+12345677347">+123 45677347</a></h5>
+                                    <h5 class="wptb-item--title">
+                                        @if($setting->first()->number_one != null)
+                                            <a href="tel:{{ $setting->first()->number_one }}">{{ $setting->first()->number_one }}</a>
+                                        @endif
+                                    </h5>
                                 </div>
                             </div>
     
@@ -45,14 +51,24 @@
                                     <div class="wptb-item--subtitle">
                                         SEND US EMAIL
                                     </div>
-                                    <h5 class="wptb-item--title"><a href="mailto:Hamim@email.com">Hamim@email.com</a></h5>
+                                    <h5 class="wptb-item--title">
+                                        @if($setting->first()->email != null)
+                                            <a href="mailto:{{ $setting->first()->email }}">{{ $setting->first()->email }}</a>
+                                         @endif
+                                    </h5>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-7">
-                        <form class="wptb-form" action="https://wpthemebooster.com/demo/themeforest/html/kimono/light/contact.php" method="post">
+                        @if(session('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+                        <form class="wptb-form" action="{{ route('message.store') }}" method="post">
+                            @csrf
                             <div class="wptb-form--inner">        
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 mb-4">
@@ -67,9 +83,19 @@
                                         </div>
                                     </div>
 
+                                    <div class="col-lg-6 col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <input type="number" name="number" class="form-control" placeholder="Number" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                                        </div>
+                                    </div>
                                     <div class="col-lg-12 col-md-12 mb-4">
                                         <div class="form-group">
-                                            <input type="text" name="subject" class="form-control" placeholder="Subject">
+                                            <input type="text" name="address" class="form-control" placeholder="Address" required>
                                         </div>
                                     </div>
 

@@ -93,11 +93,10 @@
 
                                                     <div class="modal-body px-4">
                                                         <div class="row mb-6">
-                                                            <label for="coverImage" class="col-sm-4 col-lg-2 col-form-label">collection <span class="text-secondary">(Optional)</span></label>
-
+                                                            <label for="coverImage" class="col-sm-4 col-lg-2 col-form-label">Image <span class="text-secondary">(*)</span></label>
                                                             <div class="col-sm-4 col-lg-6">
                                                                 <div class="custom-file mb-1">
-                                                                    <input type="file" class="custom-file-input @error('address') is-invalid @enderror" name="image" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                                                    <input type="file" class="custom-file-input @error('image') is-invalid @enderror" name="image" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                                                                     <label class="custom-file-label" for="coverImage">Choose
                                                                         file...</label>
                                                                     <div class="invalid-feedback">Example invalid custom file feedback

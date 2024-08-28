@@ -18,8 +18,8 @@
                                 </div>
                                 <div class="wptb-heading">
                                     <div class="wptb-item--inner">
-                                        <h1 class="wptb-item--title">Hamim Jason</h1>
-                                        <h6 class="wptb-item--subtitle">{{ $banner->banner_link }}</h6>
+                                        <h1 class="wptb-item--title">{{ $banner->link }}</h1>
+                                        {{-- <h6 class="wptb-item--subtitle"></h6> --}}
                                     </div>
                                 </div>
                             </div>
@@ -248,7 +248,7 @@
                                 <div class="wptb-item--inner">
                                     <div class="wptb-item--image">
                                         <img src="{{ asset('uploads/review') }}/{{ $review->image }}" alt="img">
-                                        <a class="wptb-item--link"><i class="bi bi-chevron-right"></i></a>
+                                        
                                     </div>
 
                                     <div class="wptb-item--holder">
@@ -295,7 +295,7 @@
                                         <a href="{{ route('stories.details',$store->slug ) }}" class="wptb-item-link"><img src="{{ asset('uploads/storie') }}/{{ $store->image }}" alt="img"></a>
                                     </div>
                                     <div class="wptb-item--holder">
-                                        <div class="wptb-item--date">{{ $store->created_at->format('d M Y') }}</div>
+                                        <div class="wptb-item--date mt-3">{{ $store->created_at->format('d M Y') }}</div>
                                         <h4 class="wptb-item--title"><a href="{{ route('stories.details',$store->slug ) }}">{{ $store->title }}</a></h4>
                                         
                                     </div>

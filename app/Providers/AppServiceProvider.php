@@ -39,20 +39,16 @@ class AppServiceProvider extends ServiceProvider
         View::composer('frontend.layouts.app', function ($view){
             $view->with('setting', Setting::all());
         });
-        // frontend app
+        // frontend index
         View::composer('frontend.index', function ($view){
+            $view->with('setting', Setting::all());
+        });
+        // frontend contect
+        View::composer('frontend.contect', function ($view){
             $view->with('setting', Setting::all());
         });
         // frontend header
         View::composer('frontend.layouts.header', function ($view){
-            $view->with('setting', Setting::all());
-        });
-        // frontend app
-        View::composer('frontend.layouts.home_app', function ($view){
-            $view->with('setting', Setting::all());
-        });
-        // frontend header
-        View::composer('frontend.layouts.home_header', function ($view){
             $view->with('setting', Setting::all());
         });
         // frontend header

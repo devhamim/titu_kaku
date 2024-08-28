@@ -24,7 +24,7 @@
                             <thead>
                                 <tr>
                                     <th>Image</th>
-                                    <th>Link</th>
+                                    <th>Text</th>
                                     <th>Status</th>
                                     <th>Date</th>
                                     <th>Action</th>
@@ -97,7 +97,7 @@
 
                                                             <div class="col-sm-4 col-lg-6">
                                                                 <div class="custom-file mb-1">
-                                                                    <input type="file" class="custom-file-input @error('address') is-invalid @enderror" name="image" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                                                    <input type="file" class="custom-file-input @error('image') is-invalid @enderror" name="image" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                                                                     <label class="custom-file-label" for="coverImage">Choose
                                                                         file...</label>
                                                                     <div class="invalid-feedback">Example invalid custom file feedback
@@ -115,7 +115,7 @@
                                                         <div class="row mb-2">
                                                             <div class="col-lg-6">
                                                                 <div class="form-group mb-4">
-                                                                    <label for="link">Link <span class="text-secondary">(Optional)</span></label>
+                                                                    <label for="link">Text <span class="text-secondary">(Optional)</span></label>
                                                                     <input type="text" id="link" class="form-control" name="link" value="{{ $banner->link }}">
                                                                 </div>
                                                             </div>
@@ -183,7 +183,7 @@
                         <div class="row mb-2">
                             <div class="col-lg-12">
                                 <div class="form-group mb-4">
-                                    <label for="link">Link <span class="text-secondary">(Optional)</span></label>
+                                    <label for="link">Text <span class="text-secondary">(Optional)</span></label>
                                     <input type="text" id="link" class="form-control" name="link" value="{{ old('link') }}">
                                 </div>
                             </div>

@@ -53,9 +53,9 @@
                         <div class="footer-widget text-md-end">
                             <div class="footer-nav">
                                 <ul>
-                                    <li class="menu-item"><a href="blog-grid.html">Recent Posts</a></li>
-                                    <li class="menu-item"><a href="project-general.html">Gallery</a></li>
-                                    <li class="menu-item"><a href="contact-1.html">Contact Us</a></li>
+                                    <li class="menu-item"><a href="{{ route('our.videos') }}">Videos</a></li>
+                                    <li class="menu-item"><a href="{{ route('gallery') }}">Gallery</a></li>
+                                    <li class="menu-item"><a href="{{ route('contect') }}">Contact</a></li>
                                 </ul>
                             </div>
                         </div>

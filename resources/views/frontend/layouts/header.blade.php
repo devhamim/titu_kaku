@@ -7,12 +7,15 @@
                 <!-- Left Part -->
                 <div class="header_left_part d-flex align-items-center">
                     <div class="logo">
-                        <a href="{{ url('/')}}" class="light_logo">
-                            <img src="{{ asset('frontend/assets/img/logo.png') }}" alt="logo">
+
+                        <a href="{{ url('/') }}" class="headerlogo">
+                            @if($setting->first()->white_logo != null)
+                                <img src="{{ asset('uploads/setting') }}/{{ $setting->first()->white_logo }}" alt="logo">
+                            @else
+                                <img src="{{ asset('uploads/setting') }}/{{ $setting->first()->black_logo }}" alt="logo" >
+                            @endif
                         </a>
-                        <a href="{{ url('/')}}" class="dark_logo">
-                            <img src="{{ asset('frontend/assets/img/logo.png') }}" alt="logo">
-                        </a>
+                        
                     </div>
                 </div>
 
@@ -24,17 +27,21 @@
                                 <a href="{{ url('/') }}">Home</a>
                             </li>
                             <li class="menu-item">
+                                <a href="{{ route('our.stories') }}">Stories</a>
+                            </li> 
+                            <li class="menu-item">
+                                <a href="{{ route('our.videos') }}">Videos</a>
+                            </li> 
+                            <li class="menu-item">
                                 <a href="{{ route('gallery') }}">Gallery</a>
                             </li>  
                             <li class="menu-item">
                                 <a href="{{ route('about.us') }}">About Us</a>
                             </li>
                             <li class="menu-item ">
-                                <a href="{{ route('contect') }}">Contact</a>
+                                <a href="{{ route('contect') }}">Enquire</a>
                             </li>                         
-                            <li class="menu-item">
-                                <a href="{{ route('blogs') }}">Blog</a>
-                            </li> 
+                            
                         </ul>
                     </div>
                 </div>
@@ -95,9 +102,9 @@
         <div class="wptb-item--inner flex-start">
             <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
             <div class="wptb-item--holder">
-                    @if($setting->first()->number_one != null)
-                        <p class="wptb-item--description"><a href="tel:{{ $setting->first()->number_one }}">{{ $setting->first()->number_one }}</a></p>
-                    @endif
+                @if($setting->first()->number_one != null)
+                    <p class="wptb-item--description"><a href="tel:{{ $setting->first()->number_one }}">{{ $setting->first()->number_one }}</a></p>
+                @endif
             </div>
         </div>
     </div>

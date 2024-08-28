@@ -37,7 +37,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'name'=>'required|max:225',
+            'name'=>'nullable|max:225',
         ];
 
         $validatedData = $request->validate($rules);

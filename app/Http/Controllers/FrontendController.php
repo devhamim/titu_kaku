@@ -6,6 +6,7 @@ use App\Models\About;
 use App\Models\Banner;
 use App\Models\Category;
 use App\Models\Client;
+use App\Models\ContectMessage;
 use App\Models\Experience;
 use App\Models\PrivacyPolicy;
 use App\Models\Review;
@@ -41,7 +42,10 @@ class FrontendController extends Controller
 
     // gallery
     function gallery(){
-        return view('frontend.gallery');
+        $categorys = Category::where('status', 1)->get();
+        return view('frontend.gallery',[
+            'categorys'=>$categorys,
+        ]);
     }
     // contect
     function contect(){
@@ -50,15 +54,61 @@ class FrontendController extends Controller
 
     // blogs
     function blogs(){
-        return view('frontend.blog');
+        $stores = Stores::where('status', 1)->get();
+        return view('frontend.blog',[
+            'stores'=>$stores,
+        ]);
+    }
+    // stories_details
+    function stories_details($slug){
+        $stores = Stores::where('slug',$slug)->first();
+        $galleryImages = json_decode($stores->gallery, true);
+        return view('frontend.blog_details',[
+            'stores'=>$stores,
+            'galleryImages'=>$galleryImages,
+        ]);
+    }
+
+    // our_videos
+    function our_videos(){
+        $videos = Video::where('status', 1)->get();
+        return view('frontend.videos',[
+            'videos'=>$videos,
+        ]);
+    }
+    // message_store
+    function message_store(Request $request){
+        $rules = [
+            'name'=>'required|max:225',
+            'email'=>'required|max:225',
+            'number'=>'required|max:225',
+            'subject'=>'required|max:225',
+            'address'=>'required|max:225',
+            'message'=>'required|max:1000',
+        ];
+        $validatesData = $request->validate($rules);
+
+        $contectMessage = ContectMessage::create($validatesData);
+        if($contectMessage){
+            return back()->with('success', 'Create successfully.');
+        }
+        else{
+            return back()->with('error', 'Failed to create.');
+        }
     }
    
 
    //about_us
    function about_us(){
     $abouts = About::where('status', 1)->first();
+    $clients = Client::where('status', 1)->get();
+    $videos = Video::where('status', 1)->first();
+    $experience = Experience::first();
     return view('frontend.about',[
         'abouts'=>$abouts,
+        'clients'=>$clients,
+        'videos'=>$videos,
+        'experience'=>$experience,
     ]);
 }
 
