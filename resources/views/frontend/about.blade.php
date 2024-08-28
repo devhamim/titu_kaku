@@ -86,7 +86,6 @@
         </div>
     </section>
 
-    <!-- FAQ -->
     <!-- Agency Experience -->
     {{-- <section class="wptb-agency-experience bg-image pb-xl-0" style="background-image: url('{{ asset('frontend') }}/assets/img/background/bg-13.jpg');">
         <div class="container">
