@@ -3,7 +3,7 @@
 <!-- Main Wrapper-->
 <main class="wrapper">
     <div class="wptb-page-heading">
-        <div class="wptb-item--inner" style="background-image: url('{{ asset('frontend') }}/assets/img/background/page-header-bg-12.jpg');">
+        <div class="wptb-item--inner" style="background-image: url('{{ asset('frontend') }}/assets/img/background/page-header-bg-15.jpg');">
             <div class="wptb-item-layer wptb-item-layer-one">
                 <img src="{{ asset('frontend') }}/assets/img/more/circle.png" alt="img">
             </div>

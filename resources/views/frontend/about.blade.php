@@ -169,7 +169,7 @@
     <div class="divider-line-hr mr-top-100"></div>
 
     <!-- Testimonial -->
-    <section class="wptb-testimonial-one testimonial-colored bg-image" style="background-image: url('{{ asset('frontend') }}/assets/img/background/bg-16.jpg');">
+    <section class="wptb-testimonial-one testimonial-colored bg-image" style="background-image: url('{{ asset('frontend') }}/assets/img/background/bg-16.webp');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
