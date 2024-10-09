@@ -84,7 +84,7 @@
                     <div class="grid-sizer"></div>                          
                     <div class="row"> 
                         @foreach ($categorys->take(9) as $category)
-                            <div class="grid-item col-md-4">
+                            <div class="grid-item col-md-4 col-6">
                                 <div class="wptb-item--inner">
                                     <div class="wptb-item--image">
                                         <img src="{{asset('uploads/category')}}/{{ $category->image }}" alt="img">
@@ -172,7 +172,7 @@
     </section>
 
     <!-- Testimonial -->
-    <section class="wptb-testimonial-one testimonial-colored bg-image" style="background-image: url('{{ asset('frontend') }}/assets/img/background/bg-16.jpg');">
+    <section class="wptb-testimonial-one testimonial-colored bg-image" style="background-image: url('{{ asset('frontend') }}/assets/img/background/bg-16.webp');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">

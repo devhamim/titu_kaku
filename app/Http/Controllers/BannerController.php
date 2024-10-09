@@ -37,7 +37,7 @@ class BannerController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'image'=>'required|max:2048',
+            'image'=>'required',
             'link'=>'nullable',
         ];
 
@@ -85,7 +85,7 @@ class BannerController extends Controller
         $banner = Banner::find($id);
 
         $rules = [
-            'image'=>'nullable|max:2048',
+            'image'=>'nullable',
             'link'=>'nullable',
         ];
 

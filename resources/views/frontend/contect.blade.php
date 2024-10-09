@@ -5,7 +5,7 @@
 <main class="wrapper">
     <!-- Page Header -->
     <div class="wptb-page-heading">
-        <div class="wptb-item--inner" style="background-image: url('{{ asset('frontend') }}/assets/img/background/page-header-bg-8.jpg');">
+        <div class="wptb-item--inner" style="background-image: url('{{ asset('frontend') }}/assets/img/background/page-header-bg-14.jpg');">
             <div class="wptb-item-layer wptb-item-layer-one">
                 <img src="{{ asset('frontend') }}/assets/img/more/circle.png" alt="img">
             </div>

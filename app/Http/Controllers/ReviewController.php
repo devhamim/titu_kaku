@@ -43,7 +43,7 @@ class ReviewController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'image'=>'required|max:2048',
+            'image'=>'required',
             'title'=>'nullable',
         ];
 
@@ -91,7 +91,7 @@ class ReviewController extends Controller
         $reviews = Review::find($id);
 
         $rules = [
-            'image'=>'nullable|max:2048',
+            'image'=>'nullable',
             'title'=>'nullable',
         ];
 
