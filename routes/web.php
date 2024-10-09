@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CategoryController;
@@ -36,6 +37,8 @@ Route::get('/our/stories', [FrontendController::class, 'blogs'])->name('our.stor
 Route::get('/our/videos', [FrontendController::class, 'our_videos'])->name('our.videos');
 Route::get('/stories/details/{slug}', [FrontendController::class, 'stories_details'])->name('stories.details');
 Route::post('/message/store', [FrontendController::class, 'message_store'])->name('message.store');
+Route::get('/albums', [FrontendController::class, 'albums'])->name('albums');
+Route::get('/albums/details/{slug}', [FrontendController::class, 'albums_details'])->name('albums.details');
 
 
 // addtional page
@@ -64,6 +67,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::resource('clients', ClientController::class);
     Route::resource('stories', StoresController::class);
     Route::resource('videos', VideoController::class);
+    Route::resource('album', AlbumController::class);
 
     // addtional page
     Route::resource('about', AboutController::class);

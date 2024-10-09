@@ -27,6 +27,9 @@
                                 <a href="{{ url('/') }}">Home</a>
                             </li>
                             <li class="menu-item">
+                                <a href="{{ route('albums') }}">Album</a>
+                            </li> 
+                            <li class="menu-item">
                                 <a href="{{ route('our.stories') }}">Stories</a>
                             </li> 
                             <li class="menu-item">

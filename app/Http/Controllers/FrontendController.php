@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Album;
 use App\Models\Banner;
 use App\Models\Category;
 use App\Models\Client;
@@ -74,6 +75,22 @@ class FrontendController extends Controller
         $videos = Video::where('status', 1)->get();
         return view('frontend.videos',[
             'videos'=>$videos,
+        ]);
+    }
+    // albums
+    function albums(){
+        $albums = Album::where('status', 1)->get();
+        return view('frontend.album',[
+            'albums'=>$albums,
+        ]);
+    }
+    // albums_details
+    function albums_details($slug){
+        $albums = Album::where('slug',$slug)->first();
+        $galleryImages = json_decode($albums->gallery, true);
+        return view('frontend.albumdtails',[
+            'albums'=>$albums,
+            'galleryImages'=>$galleryImages,
         ]);
     }
     // message_store

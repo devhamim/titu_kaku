@@ -81,6 +81,13 @@
                         <span class="nav-text">Videos</span>
                     </a>
                 </li>
+                <!-- album list -->
+                <li>
+                    <a class="sidenav-item-link" href="{{ route('album.index') }}">
+                        <i class="mdi mdi-cart"></i>
+                        <span class="nav-text">Album</span>
+                    </a>
+                </li>
                 <!-- review list -->
                 <li>
                     <a class="sidenav-item-link" href="{{ route('collection.index') }}">

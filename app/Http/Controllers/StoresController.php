@@ -46,7 +46,7 @@ class StoresController extends Controller
             'title'=>'required|max:225',
             'description'=>'required|max:1000',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'gallery.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'gallery.*' => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ];
 
         $validatedData = $request->validate($rules);
@@ -110,7 +110,7 @@ class StoresController extends Controller
         'title' => 'required|max:225',
         'description' => 'required|max:1000',
         'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-        'gallery.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        'gallery.*' => 'nullable|image|mimes:jpeg,png,jpg,gif',
     ];
 
     $validatedData = $request->validate($rules);
