@@ -37,7 +37,7 @@ class AlbumController extends Controller
             'category'=>'nullable|max:225',
             'price'=>'nullable|max:225',
             'sort_description'=>'nullable',
-            'description'=>'required|max:1000',
+            'description'=>'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'gallery.*' => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ];
@@ -103,7 +103,7 @@ class AlbumController extends Controller
         'category'=>'nullable|max:225',
         'price'=>'nullable|max:225',
         'sort_description'=>'nullable',
-        'description' => 'required|max:1000',
+        'description' => 'required',
         'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         'gallery.*' => 'nullable|image|mimes:jpeg,png,jpg,gif',
     ];
