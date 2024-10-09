@@ -97,28 +97,6 @@
                         </div>
                     @endif
                 </div>
-                {{-- <div class="product_item">
-                      
-                    <div class="product_thumb">
-                        <div class="product_imagebox">
-                            <img class="primary_img" src="{{ asset('frontend') }}/assets/img/shop/4.png" alt="img">
-                            <div class="cart_button">
-                                <a href="#" class="btn">
-                                    Add to Cart 
-                                </a>
-                            </div>
-                        </div>
-                        <div class="product_item_inner">
-                            <div class="label_text">
-                                <h2 class="product_item_name d-flex align-items-center justify-content-between gap-1 flex-wrap">
-                                    <a href="shop-product.html">Desert Frame</a>
-                                    <span class="product_item_price">$16</span>
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
- 
             </div>
         </div>
     </section>

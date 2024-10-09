@@ -78,10 +78,22 @@ class FrontendController extends Controller
         ]);
     }
     // albums
-    function albums(){
-        $albums = Album::where('status', 1)->get();
+    function albums(Request $request){
+        $category = $request->input('category');
+        if ($category) {
+            $albums = Album::where('category', $category)->paginate(20);
+            $albums_count = Album::where('category', $category)->where('status', 1)->count();
+        } else {
+            $albums = Album::where('status', 1)->paginate(20);
+            $albums_count = Album::where('status', 1)->count();
+        }
+    
+        $categories = Album::select('category')->distinct()->get();
+        
         return view('frontend.album',[
             'albums'=>$albums,
+            'albums_count'=>$albums_count,
+            'categories'=>$categories,
         ]);
     }
     // albums_details

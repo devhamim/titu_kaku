@@ -13,6 +13,7 @@ class AlbumController extends Controller
      */
     public function index()
     {
+        
         $albums = Album::all();
         return view('backend.albums',[
             'albums'=>$albums,
