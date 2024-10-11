@@ -328,7 +328,7 @@
                     <img src="{{ asset('frontend') }}/assets/img/more/light-3.png" alt="img">
                 </div>
             </div> --}}
-            {!! $video->videolink !!}
+            {!! $videos->videolink !!}
         </div>
     
         <div class="divider-line-hr mr-top-100"></div>
