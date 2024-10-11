@@ -72,7 +72,7 @@ class FrontendController extends Controller
 
     // our_videos
     function our_videos(){
-        $videos = Video::where('status', 1)->get();
+        $videos = Video::where('status', 1)->latest()->get();
         return view('frontend.videos',[
             'videos'=>$videos,
         ]);
