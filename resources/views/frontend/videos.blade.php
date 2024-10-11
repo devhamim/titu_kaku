@@ -17,7 +17,7 @@
     <section>
         <div class="container">
             @foreach ($videos as $video)
-                <div class="wptb-video-player1 wow zoomIn" style="background-image: url('{{ asset('uploads/videos') }}/{{ $video->image }}');">
+                {{-- <div class="wptb-video-player1 wow zoomIn" style="background-image: url('{{ asset('uploads/videos') }}/{{ $video->image }}');">
                     <div class="wptb-item--inner">
                         <div class="wptb-item--holder">
                             <div class="wptb-item--video-button">
@@ -34,7 +34,10 @@
                     <div class="wptb-item-layer wptb-item-layer-one">
                         <img src="{{ asset('frontend') }}/assets/img/more/light-3.png" alt="img">
                     </div>
-                </div>
+                </div> --}}
+               <div class="py-3">
+                    {!! $video->videolink !!}
+               </div>
             @endforeach
         </div>
     </section>
