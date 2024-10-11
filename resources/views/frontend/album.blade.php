@@ -45,7 +45,7 @@
                     
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="grid" role="tabpanel" aria-labelledby="grid-tab">
-                            <div class="product_view_grid product_col_3">
+                            <div class="product_view_grid product_col_2">
                                 @foreach($albums as $album)
                                     <div class="product_item">
                                         <div class="product_thumb">
