@@ -310,7 +310,7 @@
 
         <!-- BG Video -->
         <div class="container">
-            <div class="wptb-video-player1 wow zoomIn" style="background-image: url('{{ asset('uploads/videos') }}/{{ $videos->image }}');">
+            {{-- <div class="wptb-video-player1 wow zoomIn" style="background-image: url('{{ asset('uploads/videos') }}/{{ $videos->image }}');">
                 <div class="wptb-item--inner">
                     <div class="wptb-item--holder">
                         <div class="wptb-item--video-button">
@@ -327,7 +327,8 @@
                 <div class="wptb-item-layer wptb-item-layer-one">
                     <img src="{{ asset('frontend') }}/assets/img/more/light-3.png" alt="img">
                 </div>
-            </div>
+            </div> --}}
+            {!! $video->videolink !!}
         </div>
     
         <div class="divider-line-hr mr-top-100"></div>
