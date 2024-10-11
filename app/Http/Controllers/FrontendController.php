@@ -11,6 +11,7 @@ use App\Models\ContectMessage;
 use App\Models\Experience;
 use App\Models\PrivacyPolicy;
 use App\Models\Review;
+use App\Models\Setting;
 use App\Models\Stores;
 use App\Models\TermAndCondition;
 use App\Models\Video;
@@ -100,9 +101,11 @@ class FrontendController extends Controller
     function albums_details($slug){
         $albums = Album::where('slug',$slug)->first();
         $galleryImages = json_decode($albums->gallery, true);
+        $setting = Setting::first();
         return view('frontend.albumdtails',[
             'albums'=>$albums,
             'galleryImages'=>$galleryImages,
+            'setting'=>$setting,
         ]);
     }
     // message_store

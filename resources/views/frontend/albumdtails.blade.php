@@ -40,10 +40,10 @@
                         </div>
 
                         <div class="cart_button">
-                            <a href="shop-cart.html" class="btn btn-three w-100">
+                            <a href="tel:{{ $setting->number_one }}" class="btn btn-three w-100">
                                 <div class="btn-wrap">
-                                    <span class="text-first">Message</span>
-                                    <span class="text-second">Message</span>
+                                    <span class="text-first">Contact</span>
+                                    <span class="text-second">Contact</span>
                                 </div>
                             </a>
                         </div>

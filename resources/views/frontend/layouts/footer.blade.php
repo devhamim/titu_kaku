@@ -71,7 +71,7 @@
             <div class="footer-bottom-inner">
                 <div class="copyright">
                     @if($setting->first()->footer != null)
-                        <p><a href="{{ $setting->first()->footer }}">{{ $setting->first()->footer }}</a>, All Rights Reserved</p>
+                        <p>{{ $setting->first()->footer }}, All Rights Reserved</p>
                     @endif
                 </div>
                 <div class="social-box style-oval">
