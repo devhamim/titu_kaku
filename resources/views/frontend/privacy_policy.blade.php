@@ -6,7 +6,7 @@
             <div class="wptb-item-layer wptb-item-layer-one">
                 <img src="{{ asset('frontend') }}/assets/img/more/circle.png" alt="img">
             </div>
-            <h2 class="wptb-item--title ">Contact Us</h2>
+            <h2 class="wptb-item--title ">Privacy Policy</h2>
         </div>
     </div>
     <div class="container-xl my-5" style="min-height: 600px">
